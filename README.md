@@ -24,8 +24,8 @@ Repo for ShenNong-TCM-LLM (“神农”大模型，首个中医药大模型)
 - 🚀 [ShenNong-TCM](https://github.com/michael-wzhu/ShenNong-TCM-LLM) :
     - 这一模型的训练数据为[中医药指令数据集ShenNong_TCM_Dataset](https://huggingface.co/datasets/michaelwzhu/ShenNong_TCM_Dataset)。
     - ChatMed_TCM_Dataset以我们开源的[中医药知识图谱](https://github.com/ywjawmw/TCM_KG)为基础；
-    - 采用以实体为中心的自指令方法(entity-centric self-instruct)，调用ChatGPT得到11w+的围绕中医药的指令数据；
-    - ShenNong-TCM模型也是以LlaMA为底座，采用LoRA微调得到。微调代码与[ChatMed代码库](https://github.com/michael-wzhu/ChatMed)相同
+    - 采用以实体为中心的自指令方法[entity-centric self-instruct](./src/entity_centric_self_instruct.py)，调用ChatGPT得到11w+的围绕中医药的指令数据；
+    - ShenNong-TCM模型也是以LlaMA为底座，采用LoRA (rank=16)微调得到。微调代码与[ChatMed代码库](https://github.com/michael-wzhu/ChatMed)相同
 
 同时，欢迎大家关注我们的其他医疗大模型开源项目
 - 🚀 [ChatMed-Consult](https://huggingface.co/michaelwzhu/ChatMed-Consult) : 基于[中文医疗在线问诊数据集ChatMed_Consult_Dataset](https://huggingface.co/datasets/michaelwzhu/ChatMed_Consult_Dataset)的50w+在线问诊+ChatGPT回复作为训练集。模型主干为[LlaMA-7b](https://github.com/facebookresearch/llama),融合了[Chinese-LlaMA-Alpaca](https://github.com/ymcui/Chinese-LLaMA-Alpaca)的LoRA权重与中文扩展词表，然后再进行基于LoRA的参数高效微调。我们将全部代码都进行了公开；
@@ -46,6 +46,21 @@ Repo for ShenNong-TCM-LLM (“神农”大模型，首个中医药大模型)
 ## 快速上手
 
 如果同学们想要采用[中医药指令数据集ShenNong_TCM_Dataset](https://huggingface.co/datasets/michaelwzhu/ShenNong_TCM_Dataset)进行大模型微调，可以参考[ChatMed代码库](https://github.com/michael-wzhu/ChatMed)的代码和训练脚本；
+
+
+## 以实体为中心的自指令方法
+
+[中医药指令数据集ShenNong_TCM_Dataset](https://huggingface.co/datasets/michaelwzhu/ShenNong_TCM_Dataset)是完全开源的，可供社区成员们使用。
+
+我们知道，垂直领域相较于通用领域的不同之处在于其一般是知识密集性的，而这些知识一般是围绕一些实体的。所以，我们提出实体为中心的自指令方法[entity-centric self-instruct](./src/entity_centric_self_instruct.py)，即围绕垂直领域中的核心实体，以及各种不同的意图场景，进行指令的生成。
+如果小伙伴们想要基于自己本地的知识库/知识图谱，进行entity-centric self-instruct，则可以运行下面的命令（注意需要在代码文件中配置自己的api key）：
+```bash
+python src/entity_centric_self_instruct.py your_KG_triples.txt your_output_file.jsonl
+
+```
+
+其中"your_KG_triples.txt"文件是知识图谱每个三元组写在txt文件形成的，参考[TCM-KG](https://github.com/ywjawmw/TCM_KG)或者[TCM-KG文件](./src/TCM-KG_triples.txt).
+
 
 ## 效果对比
 
