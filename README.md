@@ -64,7 +64,7 @@ python src/entity_centric_self_instruct.py your_KG_triples.txt your_output_file.
 
 ## 效果对比
 
-通过使用[中医药指令数据集ShenNong_TCM_Dataset](https://huggingface.co/datasets/michaelwzhu/ShenNong_TCM_Dataset)对中文LlaMA-7b模型进行LoRA微调，可使得该模型在回复中医药相关问题方面获得明显的提升。这里我们展示了5个典型中医药问题下不同模型的回复。更多测试样例见[More test examples](https://github.com/michael-wzhu/ChatMed/blob/main/src/web_services/test_examples/ChatMed-Consult_test.json)
+通过使用[中医药指令数据集ShenNong_TCM_Dataset](https://huggingface.co/datasets/michaelwzhu/ShenNong_TCM_Dataset)对中文LlaMA-7b模型进行LoRA微调，可使得该模型在回复中医药相关问题方面获得明显的提升。这里我们展示了5个典型中医药问题下不同模型的回复。更多测试样例见[更多测试样例](./src/ShenNong-TCM-LLM - test examples.xls)
 
 
 | 问诊问题 | 中文LlaMA-7b | ShenNong-TCM                                                                                                                                                                                                                                                                                                                               |
@@ -111,6 +111,7 @@ Logo中的"神农"形象是由[midjourney](http://midjourney.com)自动生成。
       author={Wei Zhu and Xiaoling Wang},
       year={2023},
       publisher = {GitHub},
+      
       journal = {GitHub repository},
       howpublished = {\url{https://github.com/michael-wzhu/ChatMed}},
 }
