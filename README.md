@@ -81,6 +81,15 @@ python src/entity_centric_self_instruct.py your_KG_triples.txt your_output_file.
 - ShenNong-TCM相较于中文LlaMA-7b模型的回答会更加丰富，具有更多可行的建议，特别是可以有效根据症状推荐方剂/中草药。
 
 
+## 技术交流
+
+PromptCBLUE与大模型技术交流微信交流群二维码（截止至6月23日有效）：
+<p align="left">
+    <br>
+    <img src="./pics/wechat_qrcode.jpg" width="300"/>
+    <br>
+</p>
+
 ## 免责声明
 
 - 本项目相关资源仅供学术研究之用，严禁用于商业用途。
