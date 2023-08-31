@@ -116,7 +116,7 @@ Logo中的"神农"形象是由[midjourney](http://midjourney.com)自动生成。
 
 ```bash
 @misc{zhu2023ChatMed,
-      title={ChatMed: A Chinese Medical Large Language Model}, 
+      title={ShenNong-TCM: A Traditional Chinese Medicine Large Language Model}, 
       author={Wei Zhu, Wenjing Yue and Xiaoling Wang},
       year={2023},
       publisher = {GitHub},
