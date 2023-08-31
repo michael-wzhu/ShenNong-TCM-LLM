@@ -120,7 +120,6 @@ Logo中的"神农"形象是由[midjourney](http://midjourney.com)自动生成。
       author={Wei Zhu, Wenjing Yue and Xiaoling Wang},
       year={2023},
       publisher = {GitHub},
-      
       journal = {GitHub repository},
       howpublished = {\url{https://github.com/michael-wzhu/ShenNong-TCM-LLM}},
 }
