@@ -1,7 +1,6 @@
 # ShenNong-TCM-LLM
 Repo for ShenNong-TCM-LLM (“神农”大模型，首个中医药大模型)
 
-
 [**中文**](./README.md) | [**English**](./README_EN.md)
 
 
@@ -15,6 +14,14 @@ Repo for ShenNong-TCM-LLM (“神农”大模型，首个中医药大模型)
     <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/Chinese-LLaMA-Alpaca.svg?color=blue&style=flat-square">
     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ymcui/Chinese-LLaMA-Alpaca">
 </p>
+
+
+
+
+邵奕澎实验室作业测试
+
+
+
 
 
 以ChatGPT、GPT-4等为代表的大语言模型（Large Language Model, LLM）掀起了新一轮自然语言处理领域的研究浪潮，展现出了类通用人工智能（AGI）的能力，受到业界广泛关注。
